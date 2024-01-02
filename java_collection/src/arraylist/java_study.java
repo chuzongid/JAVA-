@@ -1,20 +1,76 @@
 package arraylist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class java_study {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> arr = new ArrayList<Integer>();
-		arr.add(10);
-		arr.add(20);
-		arr.add(50);
-		arr.add("이순신");
-		arr.add(3.14);
+		ArrayList<member> mbr = new ArrayList<member>();
+		mbr.add(new member("이순신","lee@naver.com","남",1098979033));
+		mbr.add(new member("김유신","kim@naver.com","남",1053165897));
+		mbr.add(new member("신혜선","sin@gmail.com","여",1024514789));
+		mbr.add(new member("한소희","han@daum.net","여",1056952347));
+		mbr.add(new member("신시아","sin@kakao.net","여",1021478963));
 		
-		for(int i=0; i<arr.size(); i++) {
-			System.out.println(arr.get(i));
-		}
+		System.out.println(mbr.get(2));
+		System.out.println(mbr.size());
+		System.out.println(mbr.subList(1,4));
+		
+		member tmp = new member("신시아","sin@kakao.net","여",1021478963);
+		
+		System.out.println(mbr.indexOf(tmp));
+		
+		System.out.println(mbr);
+		
+		
+//		ArrayList<Integer> arr = new ArrayList<Integer>();
+//		arr.add(10);
+//		arr.add(20);
+//		arr.add(50);
+//		arr.add(1,100);
+//		
+////		arr.add("이순신");
+////		arr.add(3.14);
+//		
+//		for(int i=0; i<arr.size(); i++) {
+//			if(arr.get(i)>20)
+//				System.out.println(arr.get(i));
+//		}
+//		
+//		System.out.println("arraylist에 값 존재여부 contains : "+arr.contains(20));
+//		System.out.println("값이 몇번쨰 인덱스 indexOf : "+arr.indexOf(50));
+//		System.out.println("arraylist에 값이 몇개 있냐 size : "+arr.size());
+//		
+//		arr.remove(2);	//지정한 인덱스 위치의 값 삭제
+//		
+//		System.out.println("arraylist 비어 있냐 isEmpty : "+arr.isEmpty());
+//		System.out.println("범위내 값 출력 subList : "+arr.subList(1, 3));
+//		
+//		arr.set(1,200);
+//		System.out.println("값 변경 set " +arr);
+//		
+//		// arr.toArray() - ArrayList를 정적 배열로 변환
+//		
+//		ArrayList<String> name = new ArrayList<String>();
+//		name.add("이순신"); name.add("강감찬"); name.add("김유신"); name.add("장영실");
+//		String[] names = new String[name.size()];
+//		System.out.println(name);
+//		name.toArray(names);
+//		System.out.println(Arrays.toString(names));
+//		
+//		// 정렬
+////		Collections.sort(arr);	// 사전적 순서 정렬
+//		arr.sort(Comparator.naturalOrder());	// 사전적 순서 정렬
+//		arr.sort(Comparator.reverseOrder());	// 사전적 순서의 역 방향 정렬
+//		System.out.println(arr);
+//		
+//		Collections.sort(name);
+//		System.out.println(name);
+		
+		
 	}
 
 }

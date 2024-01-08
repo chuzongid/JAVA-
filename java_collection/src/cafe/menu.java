@@ -22,7 +22,7 @@ public class menu {
 	
 	@Override
 	public String toString() {
-		return null;
+		return menu_name;
 	}
 	
 	
